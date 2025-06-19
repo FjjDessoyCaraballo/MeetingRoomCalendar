@@ -1,0 +1,37 @@
+{
+	"name": "meeting-room-scheduler",
+	"version": "1.0.0",
+	"description": "Calendar for the meeting room at Hive Helsinki",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "webpack serve --mode development",
+		"build": "webpack --mode production",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"typescript",
+		"tailwind",
+		"spa",
+		"react"
+	],
+	"author": "Felipe Dessoy Caraballo",
+	"license": "MIT",
+	"dependencies": {
+		"chart.js": "^4.4.9",
+		"react": "^18.2.0",
+		"react-chartjs-2": "^5.3.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.52",
+		"@types/react-dom": "^18.2.18",
+		"autoprefixer": "^10.4.18",
+		"css-loader": "^6.10.0",
+		"postcss": "^8.4.35",
+		"postcss-loader": "^8.1.0",
+		"style-loader": "^3.3.4",
+		"tailwindcss": "^3.4.1",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.8.2"
+	}
+}
