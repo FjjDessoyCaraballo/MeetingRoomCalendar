@@ -17,8 +17,8 @@ start:
 	@echo "$(GREEN)Starting containers...$(RESET)"
 	docker compose -f $(COMPOSE_FILE) up -d
 	@echo "$(GREEN)Services are running:$(RESET)"
-	@echo "$(GREEN)- Frontend: https://localhost:$$(grep FRONTEND_PORT $(ENV_FILE) | cut -d '=' -f2 || echo 8080)$(RESET)"
-	@echo "$(GREEN)- Backend API: https://localhost:$$(grep BACKEND_PORT $(ENV_FILE) | cut -d '=' -f2 || echo 3443)$(RESET)"
+	@echo "$(GREEN)- Frontend: https://localhost$(RESET)"
+	@echo "$(GREEN)- Backend API: https://localhost/api/$(RESET)"
 
 stop:
 	@echo "$(YELLOW)Stopping containers...$(RESET)"
@@ -50,16 +50,16 @@ logs-frontend:
 
 logs-nginx:
 	@echo "$(BLUE)Showing nginx logs...$(RESET)"
-	docker compsoe -f $(COMPOSE_FILE) logs -f nginx
+	docker compose -f $(COMPOSE_FILE) logs -f nginx
 
 help:
 	@echo "$(BLUE)Available commands:$(RESET)"
-	@echo " make build 			- Build docker images"
-	@echo " make start 			- Start containers in detached mode"
-	@echo " make stop 			- Stop containers"
-	@echo " make clean 			- Clean up container resources"
+	@echo " make build 		- Build docker images"
+	@echo " make start 		- Start containers in detached mode"
+	@echo " make stop 		- Stop containers"
+	@echo " make clean 		- Clean up container resources"
 	@echo " make fclean 		- Cleans up container resources and wipes database"
-	@echo " Make logs			- View logs from all containers"
+	@echo " Make logs		- View logs from all containers"
 	@echo " make logs-backend 	- View logs from backend"
 	@echo " make logs-frontend 	- View logs from frontend"
 	@echo " make logs-nginx 	- View logs from nginx"
