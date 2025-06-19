@@ -10,10 +10,6 @@ BLUE = \033[34m
 schedule: build start
 
 build:
-	@echo "$(BLUE)Building Docker images...$(RESET)"
-	docker compose -f $(COMPOSE_FILE) build --no-parallel
-
-build-individual:
 	@echo "$(BLUE)Building backend...$(RESET)"
 	docker compose -f $(COMPOSE_FILE) build backend
 	@echo "$(BLUE)Building frontend...$(RESET)"
