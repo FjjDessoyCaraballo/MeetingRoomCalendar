@@ -41,4 +41,17 @@ export default function Calendar() {
 			day: 'numeric'
 		});
 	};
+	return (
+		<div>
+			<section>
+				<h2>Booking</h2>
+				<fieldset>
+					<legend>Choose a day!</legend>
+					<input type="date" id="date-input" name="date-input"></input>
+					<button popovertarget="my-popover">Help</button>
+					<div popover id="my-popover">Select a date, you coward</div>
+				</fieldset>
+			</section>
+		</div>
+	);
 }
